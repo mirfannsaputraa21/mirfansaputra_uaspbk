@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --primary-color: #8e44ad; /* Ungu tua */
+  --secondary-color: #e84393; /* Pink cerah */
+  --bg-color: #fdf0f7; /* Background lembut pink */
+  --text-color: #333;
+  --border-radius: 8px;
+  --font-main: 'Poppins', sans-serif;
+  --font-alt: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* ================= Login Page ================= */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #e84393, #8e44ad);
+}
+
+.login-box {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-box h1 {
+  font-size: 1.7rem;
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+.login-box p {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.input-group {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.input-group label {
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= Dashboard Page ================= */
+.dashboard-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.dashboard-container h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-container p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* ================= Daftar Bahan ================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  margin-top: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+thead {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  color: #fff;
+}
+
+thead th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+tbody td, tfoot td {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #eee;
+}
+
+tfoot input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+}
+
+tfoot button {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+tfoot button:hover {
+  transform: scale(1.02);
+}
+
+button {
+  padding: 0.4rem 0.75rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.02);
+}
+
+/* ================= Navbar/Header ================= */
+header {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .navbar-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 0.5rem;
+  }
+
+  table, thead, tbody, th, td, tr {
+    font-size: 14px;
+  }
+
+  .login-box {
+    margin: 1rem;
+  }
+}
