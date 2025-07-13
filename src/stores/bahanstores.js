@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import axios from 'axios';
 
-const API_URL = 'https://db-json-api-prak.vercel.app/bahan';
+const API_URL = 'https://68733304c75558e273538faa.mockapi.io/bahan';
 
 export const useBahanStore = defineStore('bahan', {
   state: () => ({
